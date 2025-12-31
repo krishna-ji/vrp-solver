@@ -1,0 +1,11 @@
+# VRP Solver — virtual env, outputs, caches
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+proposal.md

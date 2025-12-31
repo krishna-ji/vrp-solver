@@ -1,0 +1,39 @@
+[project]
+name = "vrp-solver"
+version = "0.3.0"
+description = "Multi-objective VRP solver with demand forecasting and vehicle pre-positioning for Kathmandu delivery networks"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Krishna Acharya", email = "acharyakri99@gmail.com" }]
+
+dependencies = [
+    "numpy>=1.26",
+    "matplotlib>=3.8",
+    "folium>=0.15",
+    "fastapi>=0.111",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.4", "mypy>=1.10"]
+
+[project.scripts]
+vrp-solve = "main:main"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.0",
+]
