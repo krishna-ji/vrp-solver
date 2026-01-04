@@ -9,3 +9,7 @@ __pycache__/
 dist/
 build/
 proposal.md
+
+# Solomon benchmark data (downloaded, not source)
+data/solomon/
+data/solomon-100.zip
